@@ -1,26 +1,17 @@
 import React from 'react';
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainPage from './pages/MainPage';
+import SignInPage from './pages/SignInPage';
+import SignUpPage from './pages/SignUpPage';
 
-const App = () => {
-  const [flag, setFlag] = useState(false);
-  
-  const onMeButtonClick = () => {
-    setFlag(prev => !prev);
-  }
-
-  return (
-    <div>
-      <div>
-        <h3>
-          Welcome to React without CRA!!
-        </h3>
-        <span>
-          current state: {`${flag}`}
-        </span>
-      </div>
-      <button onClick={onMeButtonClick}>click me</button>
-    </div>
-  )
-}
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route exact path="/" element={<MainPage />}></Route>
+      <Route path="/signin" element={<SignInPage />}></Route>
+      <Route path="/signup" element={<SignUpPage />}></Route>
+    </Routes>
+  </BrowserRouter>
+);
 
 export default App;
