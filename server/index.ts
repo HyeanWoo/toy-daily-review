@@ -1,5 +1,5 @@
-const { ApolloServer, gql } = require('apollo-server');
-const { ApolloServerPluginLandingPageLocalDefault } = require('apollo-server-core');
+import { ApolloServer, gql } from 'apollo-server';
+import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 
 const typeDefs = gql`
   type Book {
