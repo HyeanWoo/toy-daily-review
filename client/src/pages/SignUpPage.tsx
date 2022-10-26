@@ -20,7 +20,7 @@ const SignInPage = () => {
         <label>Password Check</label>
         <input />
       </div>
-      <button>로그인 하기</button>
+      <button>회원가입 하기</button>
     </form>
   )
 };
